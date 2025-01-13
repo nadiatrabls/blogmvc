@@ -1,26 +1,18 @@
 <?php
  
-abstract Class Controller{
+ abstract class Controller {
 
     protected function render(string $view, $data = null){
-        //optimisation
+        // Si des données sont passées, les extraire comme variables
+        if ($data) {
+            extract($data);
+        }
 
         ob_start();
         include("../views/$view.php");
         $contenu = ob_get_clean();
         
+        // Passer le contenu dans le template
         include('../views/template/template.php');
-
     }
-
-    // public function index(){
-
-    //     include('../views/template/header.php');
-    //     include('../views/index.php');
-    //     include('../views/template/footer.php');
-
-    // }
 }
-
-
-?>

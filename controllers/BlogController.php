@@ -14,4 +14,4 @@ class BlogController extends Controller {
         $this->render('blog', ['articles' => $articles]);
     }
 }
-?>
+
