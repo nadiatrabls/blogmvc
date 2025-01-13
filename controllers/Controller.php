@@ -1,14 +1,15 @@
 <?php
  
-Class Controller{
+abstract Class Controller{
 
-    public function render(string $view, $data = null){
+    protected function render(string $view, $data = null){
+        //optimisation
 
         ob_start();
-        include('../views/'.$view.'.php');
-        
         include("../views/$view.php");
-        include('../views/template/footer.php');
+        $contenu = ob_get_clean();
+        
+        include('../views/template/template.php');
 
     }
 

@@ -1,35 +1,32 @@
 <?php 
-include_once('../controllers/AcceuilController.php');
-include_once('../controllers/BlogController.php');
-include_once('../controllers/AboutController.php');
-include_once('../controllers/ContactController.php');
+include_once('../controllers/Controller.php');
 
-
-$url = '';
-$acceuil = new AcceuilController;
-$blog = new BlogController;
-$about = new AboutController;
-$contact = new ContactController;
-
-if(isset($_GET['url']) && $_GET['blog'] == 'blog' ){
-    echo render('blog');
-// } else if(isset($_GET['url'])){
-//     echo $about->render('about');
-// } else if(isset($_GET['url'])){
-//     echo $contact->render('contact');
-// } else{
-//     echo $acceuil->render('acceuil');
+if(isset($_GET['url']) && $_GET['url'] == 'blog' ){
+    // 1: inclu le fichier  
+    include_once('../controllers/BlogController.php');
+    // 2: cree l'objet 
+    $ctrl = new BlogController;
+}elseif(isset($_GET['url']) && $_GET['url'] == 'contact' ){
+    include_once('../controllers/ContactController.php');
+    $ctrl =  new ContactController;
+}elseif(isset($_GET['url']) && $_GET['url'] == 'about' ){
+    include_once('../controllers/AboutController.php');
+    $ctrl = new AboutController;
+}else{
+    include_once('../controllers/AcceuilController.php');
+    $ctrl = new AcceuilController;
 }
 
-var_dump($url);
+// 3: on affiche
+$ctrl->index();
 
-// if(isset($_GET['url'])){
-//     echo $this->render('contact');
-// }
-
-// if($url == ''){
-//     echo "oui oui baguette";
-// }
-
+// $url = ($_GET['page'])??'';
 
 ?>
+
+
+
+
+
+
+

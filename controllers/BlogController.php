@@ -1,13 +1,17 @@
-<?php 
-include_once('Controller.php');
+<?php
+require_once __DIR__ . '/../models/Article.php';
 
-Class BlogController extends Controller{
+class BlogController extends Controller {
 
-    public function index(){
-        
-        $this->render('blog');
+    // Méthode pour afficher la liste des articles
+    public function index() {
+        // Créez une instance de la classe Article
+        $articleModel = new Article();
+        // Récupérez tous les articles
+        $articles = $articleModel->getAll();
+    
+        // Passez les articles à la vue 'blog'
+        $this->render('blog', ['articles' => $articles]);
     }
-
 }
-
 ?>
