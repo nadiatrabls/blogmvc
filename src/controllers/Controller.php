@@ -1,4 +1,5 @@
 <?php
+ namespace BlogNadia\controllers;
  
  abstract class Controller {
 

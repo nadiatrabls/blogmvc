@@ -1,5 +1,5 @@
 <?php 
-
+namespace BlogNadia\controllers;
 
 
 Class ContactController extends Controller {

@@ -2,7 +2,8 @@
     "name": "megdi/blogmvc",
     "autoload": {
         "psr-4": {
-            "Megdi\\Blogmvc\\": "src/"
+            "BlogNadia\\": "src/",
+            "app\\": "app/"
         }
     },
     "authors": [

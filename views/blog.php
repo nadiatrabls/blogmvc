@@ -52,16 +52,16 @@
                       <img src="assets/images/blog-thumb-01.jpg" alt="">
                     </div>
                     <div class="down-content">
-                      <span><?= htmlspecialchars($article['cat']); ?></span>
+                      <span><?= htmlspecialchars($article->cat); ?></span>
                       <a href="post-details.html">
-                        <h4><?= htmlspecialchars($article['titre']); ?></h4>
+                        <h4><?= htmlspecialchars($article->titre); ?></h4>
                       </a>
                       <ul class="post-info">
-                        <li><a href="#">Admin</a></li>
-                        <li><a href="#"><?= htmlspecialchars($article['date']); ?></a></li>
+                        <li><a href="#"><?= htmlspecialchars($article->auteur); ?></a></li>
+                        <li><a href="#"><?= htmlspecialchars($article->date); ?></a></li>
                         <li><a href="#">12 Comments</a></li>
                       </ul>
-                      <p><?= htmlspecialchars($article['contenu']); ?></p>
+                      <p><?= htmlspecialchars($article->contenu); ?></p>
                       <div class="post-options">
                         <div class="row">
                           <div class="col-lg-12">

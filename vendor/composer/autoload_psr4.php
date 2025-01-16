@@ -6,5 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Megdi\\Blogmvc\\' => array($baseDir . '/src'),
+    'app\\' => array($baseDir . '/app'),
+    'BlogNadia\\' => array($baseDir . '/src'),
 );
