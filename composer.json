@@ -1,0 +1,15 @@
+{
+    "name": "megdi/blogmvc",
+    "autoload": {
+        "psr-4": {
+            "Megdi\\Blogmvc\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nadia Trabelsi",
+            "email": "megdiche.nadia1996@gmail.com"
+        }
+    ],
+    "require": {}
+}
